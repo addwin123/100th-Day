@@ -8,10 +8,13 @@
     <TITLE>100th Day</TITLE>
 </HEAD>
 <BODY>
-    <audio id="music" autoplay controls loop hidden >
+    <audio id="music" autoplay controls loop  >
         <source src="music.mp3" />
 
     </audio>
+    <button onclick="getVolume()" type="button">What is the volume?</button>
+<button onclick="setHalfVolume()" type="button">Set volume to 0.2</button>
+<button onclick="setFullVolume()" type="button">Set volume to 1.0</button><br>
     <!-- Script for audio autoplay -->
     <script type="text/javascript">
         var music = document.getElementById("music");
@@ -20,7 +23,17 @@
             document.getElementById("music").play();
             
         }
-        
+        function getVolume() { 
+  alert(vid.volume);
+} 
+  
+function setHalfVolume() { 
+  vid.volume = 0.2;
+} 
+  
+function setFullVolume() { 
+  vid.volume = 1.0;
+} 
     </script>
 
     <h1>Suzanne Cheong Siew Xuan</h1>
