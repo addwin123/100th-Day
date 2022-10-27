@@ -8,7 +8,7 @@
     <TITLE>100th Day</TITLE>
 </HEAD>
 <BODY>
-    <button type='button' onclick="click()">Play</button>
+    <button type='button' value="sound" onclick="togglePlay()">Play</button>
     <audio id="music" autoplay controls loop  >
         <source src="music.mp3" />
 
@@ -22,12 +22,10 @@
             
         }
 <!-- Script for button play/pause --!>
-document.getElementById('music').play();
-},
-function click() {
-document.getElementById('music').pause();
-}
-);
+function togglePlay() {
+  var myAudio = document.getElementById("music");
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
     </script>
 
     <h1>Suzanne Cheong Siew Xuan</h1>
