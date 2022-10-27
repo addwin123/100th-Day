@@ -4,34 +4,51 @@
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/your_path_to_image/favicon.jpg">
+    <link rel="icon" href="this.jpg">
     <TITLE>100th Day</TITLE>
 </HEAD>
 <BODY>
     <button type='button' value="sound" onclick="togglePlay()">Play</button>
-    <audio id="music" autoplay controls loop  >
+    <audio id="music" autoplay controls loop hidden>
         <source src="music.mp3" />
 
     </audio>
 
-    <!-- Script for audio autoplay -->
+    <!-- Script for audio autoplay and play button -->
+    
     <script type="text/javascript">
-    <!-- Set Autoplay Script--!>
-        window.onload = function () {
-            document.getElementById("music").play();
-            
-        }
-<!-- Script for button play/pause --!>
-function togglePlay() {
-  var myAudio = document.getElementById("music");
-  return myAudio.paused ? myAudio.play() : myAudio.pause();
-};
+    
+            window.onload = function () {
+                document.getElementById("music").play();
+
+            }
+
+            function togglePlay() {
+                var myAudio = document.getElementById("music");
+                return myAudio.paused ? myAudio.play() : myAudio.pause();
+            };
     </script>
 
     <h1>Suzanne Cheong Siew Xuan</h1>
-    <h10>
-        Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for "fair use"" for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.
-        Video Link: <a href="https://www.youtube.com/watch?v=txNDABEUzK0&t=0s&ab_channel=EDMLab">Here</a>
-    </h10>
+    <button type='button' onclick="toggleDisplay()">Credits</button>
+    <div id="credits" type="hidden">
+        <h10>
+            Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for "fair use"" for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.<br />
+            (Song Name :Post Malone Ft Swae Lee - Sunflower (Sj, Arden Remix By EDM Lab Music Video): <a href="https://www.youtube.com/watch?v=txNDABEUzK0&t=0s&ab_channel=EDMLab">Here</a>
+        </h10>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("credits").style.visibility = "hidden";
+        function toggleDisplay() {
+
+            var x = document.getElementById('credits');
+            if (x.style.visibility === 'hidden') {
+                x.style.visibility = 'visible';
+            } else {
+                x.style.visibility = 'hidden';
+            }
+        }
+    </script>
+  
 </BODY>
 </HTML>
