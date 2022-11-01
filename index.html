@@ -8,16 +8,17 @@
     <TITLE>100th Day</TITLE>
 </HEAD>
 <BODY>
-    <button type='button' value="sound" onclick="togglePlay()">Play</button>
-    <audio id="music" autoplay controls loop hidden>
-        <source src="music.mp3" />
+    <div id="start">
 
-    </audio>
+        <h1 id="banner">Welcome to Suzanne Cheong Siew Xuan's 100'th Day Celebration</br></br>Click the Start Button Below </h1>
+     
+        <button type='button' value="sound" onclick="togglePlay(); toggleDisplay(); togglehide()">Play</button>
+        <audio id="music" autoplay controls loop hidden>
+            <source src="music.mp3" />
 
-    <!-- Script for audio autoplay and play button -->
-    
-    <script type="text/javascript">
-    
+        </audio>
+        <script type="text/javascript">
+
             window.onload = function () {
                 document.getElementById("music").play();
 
@@ -27,28 +28,64 @@
                 var myAudio = document.getElementById("music");
                 return myAudio.paused ? myAudio.play() : myAudio.pause();
             };
-    </script>
-
-    <h1>Suzanne Cheong Siew Xuan</h1>
-    <button type='button' onclick="toggleDisplay()">Credits</button>
-    <div id="credits" type="hidden">
-        <h10>
-            Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for "fair use"" for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.<br />
-            (Song Name :Post Malone Ft Swae Lee - Sunflower (Sj, Arden Remix By EDM Lab Music Video): <a href="https://www.youtube.com/watch?v=txNDABEUzK0&t=0s&ab_channel=EDMLab">Here</a>
-        </h10>
+        </script>
     </div>
+    <script language="javascript" type="text/javascript">
+        function changeDivImage() {
+            var imgPath = new String();
+            imgPath = document.getElementById("start").style.backgroundImage;
+
+            if (imgPath == "url(pic)" || imgPath == "") {
+                document.getElementById("div1").style.backgroundImage = "url(images/green.gif)";
+            }
+            else {
+                document.getElementById("div1").style.backgroundImage = "url(images/blue.gif)";
+            }
+        }
+    </script>
+    <!-- Script for audio autoplay and play button -->
+
+
+    <div id="main" type="hidden">
+        <h1>Suzanne Cheong Siew Xuan</h1>
+
+        <button type='button' onclick="toggleDisplaycredits()">Credits</button>
+        <div id="credits">
+            <h10>
+                Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for "fair use"" for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.<br />
+                (Song Name :Post Malone Ft Swae Lee - Sunflower (Sj, Arden Remix By EDM Lab Music Video): <a href="https://www.youtube.com/watch?v=txNDABEUzK0&t=0s&ab_channel=EDMLab">Here</a>
+            </h10>
+        </div>
+    </div>
+    <!--Script for button display & hide section-->
     <script type="text/javascript">
         document.getElementById("credits").style.visibility = "hidden";
+        document.getElementById("main").style.visibility = "hidden";
+        document.getElementById("start").style.visibility = "visible";
         function toggleDisplay() {
+            var y = document.getElementById('main');
+            if (y.style.visibility == 'hidden') {
+                y.style.visibility = 'visible';
+            } else {
+                y.style.visibility = 'hidden';
+            }
 
+        }
+        function toggleDisplaycredits() {
             var x = document.getElementById('credits');
-            if (x.style.visibility === 'hidden') {
+            if (x.style.visibility == 'hidden') {
                 x.style.visibility = 'visible';
             } else {
                 x.style.visibility = 'hidden';
             }
+
+        }
+        function togglehide() {
+            var x = document.getElementById('start');
+            x.style.display = "none";
+
         }
     </script>
-  
+
 </BODY>
 </HTML>
