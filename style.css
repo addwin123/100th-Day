@@ -1,7 +1,23 @@
-BODY
-{
+body {
+    background-image: url("pic/1 (7).jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-color: #aa6f73;
+    overflow: hidden;
+    position:relative;
 }
 h10{
     font-size:10px;
 }
-
+music{
+    volume:0.5;
+}
+#start {
+    width:50%;
+    font-size: 12px;
+    text-align: center;
+    margin:auto;
+    margin-top: 5%;
+    
+}
