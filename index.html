@@ -9,10 +9,10 @@
 </HEAD>
 <BODY>
     <div id="start">
-
+        <img src="pic\1 (7).jpg" alt="head" id="headpic">
         <h1 id="banner">Welcome to Suzanne Cheong Siew Xuan's 100'th Day Celebration</br></br>Click the Start Button Below </h1>
      
-        <button type='button' value="sound" onclick="togglePlay(); toggleDisplay(); togglehide()">Play</button>
+        <button id="startbutt"role='button' value="sound" onclick="togglePlay(); toggleDisplay(); togglehide()">Start</button>
         <audio id="music" autoplay controls loop hidden>
             <source src="music.mp3" />
 
@@ -48,7 +48,7 @@
 
     <div id="main" type="hidden">
         <h1>Suzanne Cheong Siew Xuan</h1>
-
+        <footer>
         <button type='button' onclick="toggleDisplaycredits()">Credits</button>
         <div id="credits">
             <h10>
@@ -56,6 +56,7 @@
                 (Song Name :Post Malone Ft Swae Lee - Sunflower (Sj, Arden Remix By EDM Lab Music Video): <a href="https://www.youtube.com/watch?v=txNDABEUzK0&t=0s&ab_channel=EDMLab">Here</a>
             </h10>
         </div>
+        </footer>
     </div>
     <!--Script for button display & hide section-->
     <script type="text/javascript">
