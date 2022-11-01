@@ -6,7 +6,6 @@
     --color-secondary: #E4AE41;
     --color-font: black;
     --color-third: #EE55A1;
-
     --font-family: 'Satisfy', cursive;
 }
 
@@ -15,7 +14,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--color-primary);
-
     background-image: url("./assets/cloud.jpg");
 }
 
@@ -44,18 +42,16 @@ section > span {
     margin: auto;
     margin-top: 3%;
     border-radius: 2.5em;
-
     border: none;
-
     background-image: url("./assets/bg-1.jpg");
     background-position: right top;
     background-repeat: no-repeat;
 }
 
-#headpic{
+#headpic {
     margin-top: 5em;
     /* height:auto; */
-    width:60%;
+    width: 60%;
     border-radius: 0.5em;
     border: 1px solid var(--color-font);
 }
@@ -67,11 +63,9 @@ section > span {
     margin-top: 5%;
     margin-bottom: 5%;
     position: absolute;
-
     border-radius: 1em;
     right: 75%;
 }
-
 #duck {
     width: 25%;
     height: auto;
@@ -79,26 +73,23 @@ section > span {
     margin-top: 5%;
     margin-bottom: 5%;
     position: absolute;
-
     border-radius: 1em;
-
     left: 75%;
 } */
 
 footer {
     background: #222831;
     color: #EEEEEE;
-    position: fixed;
+    position: relative;
     padding: 5px 50px;
     text-align: center;
     bottom: 0px;
     left: 0px;
     width: 100%;
 }
-   
 
-#startbutt 
-{
+
+#startbutt {
     align-items: center;
     background-color: #fee6e3;
     border: 2px solid #111;
@@ -122,38 +113,38 @@ footer {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    
-}
-#startbutt:after {
-    background-color: #111;
-    border-radius: 8px;
-    content: "";
-    display: block;
-    height: 48px;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    top: -2px;
-    transform: translate(8px, 8px);
-    transition: transform .2s ease-out;
-    z-index: -1;
 }
 
-#startbutt:hover:after {
-    transform: translate(0, 0);
-}
+    #startbutt:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
 
-#startbutt:active {
-    background-color: #ffdeda;
-    outline: 0;
-}
+    #startbutt:hover:after {
+        transform: translate(0, 0);
+    }
 
-#startbutt:hover {
-    outline: 0;
-}
+    #startbutt:active {
+        background-color: #ffdeda;
+        outline: 0;
+    }
 
-h10{
-    font-size:10px;
+    #startbutt:hover {
+        outline: 0;
+    }
+
+h10 {
+    font-size: 10px;
 }
 
 @media (min-width: 768px) {
@@ -161,3 +152,83 @@ h10{
         padding: 0 40px;
     }
 }
+
+/* Main 1 Introduction CSS */
+#main1 img{
+    width:20%;
+    height:20%;
+    
+}
+/*Back to top button*/
+#topbutt {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    color:white;
+   background-color:green;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 90%;
+  
+}
+
+    #topbutt:hover {
+        background-color: white;
+        color: white;
+    }
+.material-icons{
+    color:blue;
+    margin-right:50%;
+}
+
+/*Credits Button CSS*/
+footer span {
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+footer span a {
+        font-size: 19px;
+        letter-spacing: 1px;
+        transform-style: preserve-3d;
+        transform: translateZ(-25px);
+        transition: transform .25s;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+      footer  span a:before,
+   footer span a:after {
+            position: absolute;
+            content: "CREDITS";
+            height: 55px;
+            width: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid black;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+      footer  span a:before {
+            color: #fff;
+            background: #000;
+            transform: rotateY(0deg) translateZ(25px);
+        }
+
+    footer    span a:after {
+            color: #000;
+            transform: rotateX(90deg) translateZ(25px);
+        }
+
+     footer   span a:hover {
+            transform: translateZ(-25px) rotateX(-90deg);
+        }
