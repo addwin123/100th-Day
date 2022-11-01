@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="this.jpg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>100th Day!</title>
 </head>
 <body>
+    <!--Division for before start button-->
     <div id="start">
         <img src="pic\1 (7).jpg" alt="head" id="headpic">
         <!-- <img src="./assets/bg-1.jpg" alt="teddybear" id="teddy">
         <img src="./assets/bg-2.jpg" alt="rubberducky" id="duck"> -->
 
         <section>
-            <h2>Introducing</h2>
+            <h2>Introducing A New Cheong Family</h2>
             <h1>Suzanne Cheong Siew Xuan's 100'th Day Celebration!</h1>
-            <span>Welcomed with love by grateful parents Cheong and Yan Leem!</span>
+            <span>Welcomed with love by grateful parents Yew Tuck and Yan Leem!</span>
         </section>
-     
+
         <button id="startbutt" type='button' value="sound" onclick="togglePlay(); toggleDisplay(); togglehide()">Start</button>
-        <!-- <audio id="music" autoplay controls loop hidden>
+        <audio id="music" autoplay controls loop hidden>
             <source src="music.mp3" />
-        </audio> -->
+        </audio>
         <script type="text/javascript">
 
             window.onload = function () {
@@ -52,17 +55,83 @@
     </script>
     <!-- Script for audio autoplay and play button -->
 
-
+    <!--Main Page with content <3-->
     <div id="main" type="hidden">
-        <h1>Suzanne Cheong Siew Xuan</h1>
+        <button onclick="topFunction() " id="topbutt" style="text-align: center;">
+
+            <i class="material-icons">arrow_upward</i>
+        </button>
+        <!--Back to top button script-->
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("topbutt");
+
+            //Show button when user scroll
+            window.onscroll = function () { scrollFunction() };
+            //Get the button
+            var button = document.getElementById("topbutt");
+
+            //To the top function when clicked
+            function topFunction() {
+
+                window.scroll({ top: 0, behavior: "smooth" })
+
+            }
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                    mybutton.style.display = "block";
+                    button.style.display = "block";
+                } else {
+                    // mybutton.style.display = "none";
+
+                    mybutton.style.color = "black";
+                    button.style.display = "none";
+                }
+            }
+
+
+        </script>
+        <section id="main1">
+
+
+            <h1>Our Story</h1>
+            <p>Cheong Yew Tuck & Tan Yian Lim met at their workplace Fluffed Café & Dessert Bar on 2019.</p>
+            <img src="pic/cafe.jpg" alt="park">
+            <p>We started dating on January 1'st' 2021 midnight right after our 2022 New Year's celebration party together.</p>
+            <img src="pic/together.jpg" alt="date">
+            <p>We got married and registered on 20/04/2022 back at Kuantan filled with blessings</p>
+            <img src="pic/marry.jpg" alt="marry">
+            <p>Scan here for our simple wedding video!<br />Photos and Videos Directed & Composed by Cheong Yew Hong</p>
+            <img src="pic/videoqr.png" alt="qrvideo">
+
+        </section>
+        <section id="main2">
+
+
+            <h1>Our 1'st Daugthery</h1>
+            <p>On earlier , We got to know about HER!!!</p>
+            <img src="pic/ultra.jpg" alt="ultra">
+            <p>She was inside for xx weeks but She decided to meet us early.<br />She was only 1.3KG!!!</p>
+            <img src="pic/born.jpg" alt="born">
+            <p>She had a few complications but she fought through it well!!</p>
+            <img src="pic/ward.jpg" alt="ward">
+            <p>Scan here for our simple wedding video!<br />Photos and Videos Directed & Composed by Cheong Yew Hong</p>
+            <img src="pic/xx.png" alt="1">
+            <img src="pic/xx.png" alt="2">
+            <img src="pic/xx.png" alt="3">
+            <img src="pic/xx.png" alt="4">
+            <img src="pic/xx.png" alt="5">
+
+        </section>
         <footer>
-        <button type='button' onclick="toggleDisplaycredits()">Credits</button>
-        <div id="credits">
-            <h10>
-                Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for "fair use"" for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.<br />
-                (Song Name :Post Malone Ft Swae Lee - Sunflower (Sj, Arden Remix By EDM Lab Music Video): <a href="https://www.youtube.com/watch?v=txNDABEUzK0&t=0s&ab_channel=EDMLab">Here</a>
-            </h10>
-        </div>
+            <span><a onclick="toggleDisplaycredits();"></a></span>
+            <div id="credits">
+                <h10>
+                    Copyright Disclaimer under section 107 of the Copyright Act of 1976, allowance is made for "fair use"" for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research. Fair use is a use permitted by copyright statute that might otherwise be infringing.<br />
+                    (Song Name :Post Malone Ft Swae Lee - Sunflower (Sj, Arden Remix By EDM Lab Music Video): <a href="https://www.youtube.com/watch?v=txNDABEUzK0&t=0s&ab_channel=EDMLab">Here</a>
+                </h10>
+            </div>
         </footer>
     </div>
     <!--Script for button display & hide section-->
